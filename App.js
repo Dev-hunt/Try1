@@ -8,6 +8,7 @@ export default function App() {
     <View style={styles.container}>
     <View style={{ alignSelf:"center", marginTop:119}}>
       <Text style={[styles.head]} > DigiDost </Text>
+      <Text> Karan </Text>
     </View>
       <Image source={require("./Backk.png")} style={[styles.stretch,{marginTop:70,alignSelf:"center"}]} />
       
