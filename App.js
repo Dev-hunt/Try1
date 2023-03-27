@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   stretch: {
     width: 363,
     height: 238,
-    resizeMode: 'stretch',
+    // resizeMode: 'stretch',
   },
   baseText: {
     // fontFamily: 'Cochin',
