@@ -4,35 +4,17 @@ import React from 'react'
 
 const Home =({navigation})=>{
   return (
-    // <View>
-    //   <ImageBackground source={require("../asstes/Background.jpg")} style={{height:'100%',width:'100%'}}>
-    //     <View style={styles.container}>
-    //     <View style={{ alignSelf:"center",marginTop:70}}>
-    //       <Text style={[styles.head]}>DigiDost</Text>
-    //     </View>
-    //       <Image source={require("../asstes/Backk.png")} style={[styles.stretch,{marginTop:70,alignSelf:"center"}]} />
-    
-    //       <Text style={[styles.titleText,{marginTop:35,alignSelf:"center"}]}>"Your Digital Friend"</Text>
-    //       <StatusBar style="auto"/>
-    //       <Button title="Get Started" onPress={() => navigation.navigate('Dashboard')} />
-    //       <Button title='Get Started' onPress={()=> navigation.navigate('Dashboard')}/>
-    
-    //     </View>   
-    //   </ImageBackground>
-    // </View>
-    
     <>
-    {/* <ImageBackground source={require("./Background.png")} style={{height:"100%"}}> */}
     <ImageBackground source={require("../asstes/Background.jpg")} style={{height:'100%',width:'100%'}}>
     <View style={styles.container}>
-    <View style={{ alignSelf:"center", marginTop:119}}>
+    <View style={{ alignSelf:"center", marginTop:70}}>
       <Text style={[styles.head]} > DigiDost </Text>
       {/* <Text> Karan  </Text> */}
     </View>
         <Image source={require("../asstes/Backk.png")} style={[styles.stretch,{marginTop:70,alignSelf:"center"}]} />
       
       
-      <Text style={[styles.titleText,{marginTop:35,alignSelf:"center"}]}>"Your Digital Friend"</Text>
+      <Text style={[styles.titleText,{marginVertical:50,alignSelf:"center"}]}>"Your Digital Friend"</Text>
       <StatusBar style="auto" />
     </View>
     <TouchableOpacity 
@@ -82,11 +64,11 @@ const styles = StyleSheet.create({
   {
       color:"white",
       textAlign:"center",
-      marginVertical:22,
+      marginVertical:10,
       backgroundColor:"#181277",
       padding:9,
-      paddingLeft:39,
-      paddingRight:39,
+      paddingLeft:44,
+      paddingRight:44,
       alignSelf:"center",
       elevation: 8,
       borderRadius: 32,
