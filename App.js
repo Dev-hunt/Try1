@@ -1,55 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
+// In App.js in a new project
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './src/screens/Home';
+import Dashboard from './src/screens/Dashboard';
+import Addedapp from './src/components/Addedapp';
+import Todolist from './src/components/Todolist';
+import Analytics from './src/components/Analytics';
 
-export default function App() {
+
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <>
-    <ImageBackground source={require("./Background.png")} style={{height:"100%"}}>
-    <View style={styles.container}>
-    <View style={{ alignSelf:"center", marginTop:119}}>
-      <Text style={[styles.head]} > DigiDost </Text>
-    </View>
-      <Image source={require("./Backk.png")} style={[styles.stretch,{marginTop:70,alignSelf:"center"}]} />
-      
-      <Text style={[styles.titleText,{marginTop:35,alignSelf:"center"}]}>"Your Digital Friend"</Text>
-      <StatusBar style="auto" />
-    </View>
-    </ImageBackground>
-    </>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Home " component={Home}  />    
+        <Stack.Screen name='Dashboard' component={Dashboard} />
+        <Stack.Screen name='Addedapp' component={Addedapp} />
+        <Stack.Screen name='Analytics' component={Analytics} />
+
+        <Stack.Screen name='Todolist' component={Todolist} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    // backgroundColor: '#4CC8D9',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-  stretch: {
-    width: 363,
-    height: 238,
-    resizeMode: 'stretch',
-  },
-  baseText: {
-    // fontFamily: 'Cochin',
-  },
-  titleText: {
-    // fontFamily: 'Cochin',
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#110D59',
-  },
-
-  head: {
-    fontSize: 64,
-    color: '#110D59',
-    // fontFamily: "Abril Fatface"
-    // flex: 1,
-    // backgroundColor: '#4CC8D9',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  
-  },
-});
-
+export default App;
