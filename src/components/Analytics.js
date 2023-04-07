@@ -1,15 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { ImageBackground } from 'react-native';
+import Component1 from './Component1';
 
 const Analytics = () => {
   return (
     <View>
-      <ImageBackground source={require('../asstes/Background.jpg')} style={{height:'100%',width:'100%'}}>
-        <View>
-          
-        </View>
-      </ImageBackground>
+    <Component1 key={2}/>
     </View>
   )
 }
