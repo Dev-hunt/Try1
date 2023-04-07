@@ -7,6 +7,8 @@ import Dashboard from './src/screens/Dashboard';
 import Addedapp from './src/components/Addedapp';
 import Todolist from './src/components/Todolist';
 import Analytics from './src/components/Analytics';
+import Login from './src/screens/Login';
+import Signup from './src/screens/Signup';
 
 
 const Stack = createNativeStackNavigator();
@@ -16,9 +18,11 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home " component={Home}  />    
-        <Stack.Screen name='Dashboard' component={Dashboard} />
+        <Stack.Screen name="Dashboard" component={Dashboard}/>   
         <Stack.Screen name='Addedapp' component={Addedapp} />
         <Stack.Screen name='Analytics' component={Analytics} />
+        <Stack.Screen name='Login' component={Login} />
+        <Stack.Screen name='Signup' component={Signup} />
 
         <Stack.Screen name='Todolist' component={Todolist} />
       </Stack.Navigator>

@@ -9,7 +9,7 @@ const Home =({navigation})=>{
     <View style={styles.container}>
     <View style={{ alignSelf:"center", marginTop:70}}>
       <Text style={[styles.head]} > DigiDost </Text>
-      {/* <Text> Karan  </Text> */}
+     
     </View>
         <Image source={require("../asstes/Backk.png")} style={[styles.stretch,{marginTop:70,alignSelf:"center"}]} />
       
@@ -18,7 +18,7 @@ const Home =({navigation})=>{
       <StatusBar style="auto" />
     </View>
     <TouchableOpacity 
-        onPress={() => navigation.navigate('Dashboard')}
+        onPress={() => navigation.navigate('Login')}
         >
             <Text style={styles.but}>Get Started</Text>
         </TouchableOpacity>
