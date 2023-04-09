@@ -5,19 +5,27 @@ import Field from '../components/Field';
 const Login = ({navigation},{props}) => {
   return (
     <View>
+    <View style={{}}>
       <Image source={require('../asstes/antiSocial.png')} style={[styles.image,]}/>
-      <Text style={[styles.welcometxt]}>Welcome To</Text>
-      <Text style={[styles.digidost]}>DigiDost</Text>
+      </View>
+      <View>
+      <Text style={[styles.welcometxt]}>Welcome To DigiDost</Text>
+      {/* <Text style={[styles.digidost]}>DigiDost</Text> */}
+      <View style={{marginTop:20}}>
       <Field placeholder= "Email / Username" keyboardType={"email-address"}/>
       <Field placeholder="Password" secureTextEntry={true}/>
+      </View>
+      </View>
       <View style={[styles.fp1,]}>
         <Text style={[styles.fp,]}>Forgot Password ?</Text>
       </View>
+      <View >
       <TouchableOpacity 
         onPress={() => navigation.navigate('Dashboard')}
         >
             <Text style={styles.but}>  Login  </Text>
       </TouchableOpacity>
+      </View>
       <View style={{display:'flex', flexDirection:'row',justifyContent:"center"}}>
         <Text>Don't have an account ?</Text>
         <TouchableOpacity onPress={()=> navigation.navigate("Signup")}>
@@ -36,8 +44,11 @@ const styles = StyleSheet.create({
   {
     height:240,
     width:240,
-    alignSelf:"flex-end",
-    borderRadius:80,
+    // alignSelf:"flex-end",
+    marginLeft:160,
+    // marginBottom:730,
+    borderRadius:70,
+    // position:'absolute'
   },  
 
   welcometxt:
@@ -59,8 +70,9 @@ const styles = StyleSheet.create({
   fp1:
   {
     alignItems:"flex-end",
-    width:"85%",
-    marginBottom:"20%",
+    width:"89%",
+    marginBottom:"22%",
+    // marginTop:20,
 
 
   },

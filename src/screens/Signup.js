@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
   {
     height:240,
     width:240,
-    alignSelf:"flex-end",
+    // alignSelf:"flex-end",
+    marginLeft:160,
     borderRadius:80,
   },  
 

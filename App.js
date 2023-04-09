@@ -24,7 +24,8 @@ function App() {
     'RubikPixels-Regular':require("./assets/Fonts/RubikPixels-Regular.ttf") ,
     'AbrilFatface-Regular':require("./assets/Fonts/AbrilFatface-Regular.ttf"),
     "Montserrat": require('./assets/Fonts/Montserrat.ttf'),
-    "Inter-Bold": require("./assets/Fonts/Inter/static/Inter-Bold.ttf")
+    "Inter-Bold": require("./assets/Fonts/Inter/static/Inter-Bold.ttf"),
+    "Inter-Regular": require("./assets/Fonts/Inter/static/Inter-Regular.ttf"),
 })
 
 useEffect(()=>

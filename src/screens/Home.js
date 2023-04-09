@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   head: {
     fontSize: 64,
     color: '#110D59',
-    // fontFamily: "Abril Fatface"
+    fontFamily: "AbrilFatface-Regular",
     // flex: 1,
     // backgroundColor: '#4CC8D9',
     // alignItems: 'center',

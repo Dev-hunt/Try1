@@ -1,5 +1,8 @@
 import { StyleSheet, Text, View ,Image,TouchableOpacity} from 'react-native';
 import React,{useState} from 'react';
+import AddedApps from './AddedApps';
+import Analytics from './Analytics';
+import Todolist from './Todolist';
 // import { TouchableOpacity } from 'react-native-web';
 
 const Component1=()=> {
@@ -23,9 +26,16 @@ const Component1=()=> {
     <View style={{height:"100%",width:"100%",backgroundColor:"white"}}>
       <View style={[styles.uppr,{flex:1}]}>
       <View style={{flex:.85,flexDirection:"row"}}>
-      <Image source={require("../../assets/icons/Menu(White).png")} style={{height:25,width:25,marginTop:"5%",marginLeft:"4%"}}/>
+      <TouchableOpacity style={{marginTop:"5%",marginLeft:"4%"}}>
+
+      <Image source={require("../../assets/icons/Menu(White).png")} style={{height:25,width:25}}/>
+
+      </TouchableOpacity>
         <Text style={styles.head}>DigiDost</Text>
-        <Text style={styles.head_small}>Pro</Text>
+        <TouchableOpacity style={styles.head_small}>
+        <Text style={[styles.head_small,{marginLeft:0}]}>Pro</Text>
+        {/* <Text style={styles.head_small}>Pro</Text> */}
+        </TouchableOpacity>
         {/* <Text style={styles.head_small}>Pro</Text> */}
       </View>
       <View style={{flex:1,flexDirection:"row"}}>
@@ -61,9 +71,25 @@ const Component1=()=> {
         </View>
       </View>
       </View>
-      <View style={{flex:4.12}}>
+      <View style={[{flex:4.12}]}>
+      {/* <View > */}
       <View style={[styles.sec,{flex:1}]}></View>
-      <View style={[styles.end,{flex:4}]}></View>
+      <View style={[styles.end,{flex:4}]}>
+      {/* <Temporary/> */}
+      {/* {console.log("hello")} */}
+
+      {/* Redirect to screens from Here */}
+        {selected==1?<AddedApps/>:""}
+        {selected==2?<Analytics/>:""}
+        {selected==3?<Todolist/>:""}
+        {/* <View style={styles.secondHalf}> */}
+          {/* <Text>Hello</Text> */}
+          
+        {/* </View> */}
+      </View>
+      {/* </View> */}
+      {/* <Temporary/> */}
+          {/* <BoxModel/> */}
       </View>
     </View>
   )
@@ -80,14 +106,17 @@ const styles = StyleSheet.create({
     {
         width: "100%",
         backgroundColor:"#144E76",
+        // position:"relative",
     },
     end:
     {
         width:"100%",
         height:"100%",
         backgroundColor:"white",
+        // backgroundColor:"cyan",
         borderTopEndRadius:90,
         position:"absolute",
+        // justifyContent:"center",
     },
     head:
     {
@@ -155,6 +184,19 @@ const styles = StyleSheet.create({
       marginLeft:"1.25%",
       fontSize:18,
     },
+    secondHalf:
+    {
+      // backgroundColor:"red",
+      height:"100%",
+      width:"100%",
+      justifyContent:"center",
+      alignSelf:"center",
+      alignItems:"center",
+      borderTopRightRadius:90,
+      
+      // position:"absolute",
+      // padding:20,
+    }
 
 })
 export default Component1;
