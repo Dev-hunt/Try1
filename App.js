@@ -8,7 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/screens/Home';
 import Dashboard from './src/screens/Dashboard';
-import Addedapp from './src/components/Addedapp';
+import Addedapp from './src/components/AddedApps';
 import Todolist from './src/components/Todolist';
 import Analytics from './src/components/Analytics';
 import Login from './src/screens/Login';
