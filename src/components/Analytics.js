@@ -1,7 +1,34 @@
-import { StyleSheet, Text, View ,Image,TouchableOpacity} from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View ,Image,TouchableOpacity} from 'react-native';
+import React,{useState} from 'react';
 
-const Analytics = () => {
+const Project_Analytics = () => {
+
+    const [b1, setB1] = useState({
+        flexGrow: 2,
+        flexBasis: 40,
+        flexShrink:2,
+      });
+      const [b2, setB2] = useState({
+        flexGrow: 2,
+        flexBasis: 60,
+        flexShrink:2,
+      });
+      const [b3, setB3] = useState({
+        flexGrow: 2,
+        flexBasis: 20,
+        flexShrink:2,
+      });
+      const [b4, setB4] = useState({
+        flexGrow: 2,
+        flexBasis: 30,
+        flexShrink:2,
+      });
+
+    // b1=4;
+    // b2=3;
+    // b3=1;
+
+
     return (
         <View style={styles.container}>
             <View style={styles.first}>
@@ -21,12 +48,20 @@ const Analytics = () => {
                 {/* <Text>------------</Text> */}
                 </View>
                 <Text style={{fontFamily: "Inter-Bold",fontSize: 26,marginLeft: "3%"}}>47m</Text>
-
-
+            <View style={styles.progreesBar}>
+            
+            <View style={[styles.box1,{flexBasis:b1.flexBasis,flexGrow:b1.flexGrow}]}></View>
+            <View style={[styles.box2,{flexBasis:b2.flexBasis,flexGrow:b2.flexGrow}]}></View>
+            <View style={[styles.box3,{flexBasis:b3.flexBasis,flexGrow:b3.flexGrow}]}></View>
+            <View style={[styles.box4,{flexBasis:b4.flexBasis,flexGrow:b4.flexGrow}]}></View>
+            {/* <View style={[styles.box1,{}]}></View>
+            <View style={[styles.box2,{}]}></View>
+            <View style={[styles.box3,{}]}></View>
+            <View style={[styles.box4,{}]}></View> */}
+            </View>
 
             </View>
             <View style={styles.third}>
-
 
             </View>
             <View style={styles.fourth}>
@@ -38,7 +73,7 @@ const Analytics = () => {
     )
 }
 
-export default Analytics
+export default Project_Analytics
 
 
 const styles = StyleSheet.create({
@@ -94,5 +129,61 @@ const styles = StyleSheet.create({
         alignItems:"center",
         
 
-    }
+    },
+    progreesBar:
+    {
+        backgroundColor:"#ddd",
+        flexBasis:35,
+        marginHorizontal:15,
+        marginVertical:18,
+        borderRadius:20,
+        flexDirection:"row",
+    },
+    box1:
+    {
+        backgroundColor:"#8B0C03",
+        // flexBasis:,
+        // flexBasis:40,
+        borderTopLeftRadius:20,
+        borderBottomLeftRadius:20,
+        // flexGrow:2,
+        // flexShrink:2,
+        
+    
+        
+    },
+    box2:
+    {
+        backgroundColor:"#292DAC",
+        // flexBasis:40,
+        // flexGrow:2,
+        // flexShrink:4,
+
+
+        
+    },
+    box3:
+    {
+        backgroundColor:"#9747FF",
+        // flexBasis:40,
+        // flexGrow:2,
+        // flexShrink:4,
+
+        // borderTopRightRadius:20,
+        // borderBottomRightRadius:20,
+
+    },
+    box4:
+    {
+        backgroundColor:"#ddd",
+        // flexBasis:40,
+        // flexGrow:10,
+
+
+        borderTopRightRadius:20,
+        borderBottomRightRadius:20,
+
+
+    },
+
 })
